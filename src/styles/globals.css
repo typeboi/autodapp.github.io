@@ -1,0 +1,74 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+.font-sans {
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+@-webkit-keyframes scrollSmall{
+  0%{
+      transform:rotate(-13deg) translateY(0)
+  }
+  to{
+      transform:rotate(-13deg) translateY(-639px)
+  }
+}
+@keyframes scrollSmall{
+  0%{
+      transform:rotate(-13deg) translateY(0)
+  }
+  to{
+      transform:rotate(-13deg) translateY(-639px)
+  }
+}
+@-webkit-keyframes scrollLarge{
+  0%{
+      transform:rotate(-13deg) translateY(0)
+  }
+  to{
+      transform:rotate(-13deg) translateY(-1278px)
+  }
+}
+@keyframes scrollLarge{
+  0%{
+      transform:rotate(-13deg) translateY(0)
+  }
+  to{
+      transform:rotate(-13deg) translateY(-1278px)
+  }
+}
+
+.scroll-bg{
+  -webkit-animation-name:scrollSmall;
+  animation-name:scrollSmall;
+  -webkit-animation-duration:15s;
+  animation-duration:15s;
+  -webkit-animation-timing-function:linear;
+  animation-timing-function:linear;
+  -webkit-animation-iteration-count:infinite;
+  animation-iteration-count:infinite
+}
+
+@media (min-width:1024px){
+  .scroll-bg{
+      -webkit-animation-name:scrollLarge;
+      animation-name:scrollLarge;
+      -webkit-animation-duration:35s;
+      animation-duration:35s;
+      -webkit-animation-timing-function:linear;
+      animation-timing-function:linear;
+      -webkit-animation-iteration-count:infinite;
+      animation-iteration-count:infinite
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}

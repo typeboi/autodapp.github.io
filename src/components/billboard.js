@@ -25,39 +25,33 @@ const Content = styled.div`
   background-position: -5px -5px;
 `
 
+const Logo = styled.img`
+  width: 180px;
+  height: 40px;
+`
+
 function Billboard() {
   const data = useStaticQuery(graphql`
     query BillboardQuery {
       logo: file(absolutePath: { regex: "/autodapp-logo.png/" }) {
-        childImageSharp {
-          fixed(width: 180, height: 40) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        publicURL
       }
       ray: file(absolutePath: { regex: "/raymondcheng00.jpg/" }) {
-        childImageSharp {
-          fixed(width: 48, height: 48) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        publicURL
       }
       jeff: file(absolutePath: { regex: "/jeffreyxdash.jpg/" }) {
-        childImageSharp {
-          fixed(width: 48, height: 48) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        publicURL
       }
       hero: file(absolutePath: { regex: "/hero.png/" }) {
-        childImageSharp {
-          fixed(width: 1600, height: 2600) {
-            src
-          }
-        }
+        publicURL
       }
       bg: file(absolutePath: { regex: "/bg.svg/" }) {
         publicURL
+        childImageSharp {
+          fixed(width: 1600, height: 2600) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
       splash: file(absolutePath: { regex: "/splash.png/" }) {
         childImageSharp {
@@ -88,7 +82,7 @@ function Billboard() {
       name="mc-embedded-subscribe-form"
       className="validate"
       target="_blank"
-      novalidate
+      noValidate
     >
       <input
         type="email"
@@ -135,10 +129,7 @@ function Billboard() {
             <div className="px-6 pt-8 pb-12 md:max-w-3xl md:mx-auto lg:mx-0 lg:max-w-none lg:pt-0 lg:pb-12">
               <div className="flex justify-between">
                 <div>
-                  <Image
-                    fixed={data.logo.childImageSharp.fixed}
-                    alt={"AutoDapp"}
-                  />
+                  <Logo src={data.logo.publicURL} alt={"AutoDapp"} />
                 </div>
                 <div className="pt-2 lg:pt-2 xl:pt-2">
                   <a
@@ -170,7 +161,7 @@ function Billboard() {
               <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mt-6 xl:mt-8">
                 Sign up for updates
               </p>
-              <div className="mt-4 sm:flex xl:mt-6">{form}</div>
+              <div className="mt-4 sm:flex xl:mt-4">{form}</div>
             </div>
             <div className="mt-8 sm:mt-12 relative h-64 overflow-hidden bg-gray-300 lg:hidden">
               <Hero2
@@ -184,17 +175,17 @@ function Billboard() {
               <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
                 Talk to us
               </p>
-              <div className="mt-4 sm:flex">
+              <div className="sm:flex">
                 <a
                   href="https://twitter.com/raymondcheng00"
                   className="flex items-center no-underline shadow-none"
                   target="_blank"
                 >
-                  <div className="flex-shrink-0">
-                    <Image
-                      fixed={data.ray.childImageSharp.fixed}
+                  <div className="flex-shrink-0 mt-6">
+                    <img
+                      src={data.ray.publicURL}
                       className="h-12 w-12 rounded-full border-2 border-white"
-                      alt={"https://twitter.com/jeffreyxdash"}
+                      alt={"https://twitter.com/raymondcheng00"}
                     />
                   </div>
                   <div className="ml-3">
@@ -213,9 +204,9 @@ function Billboard() {
                   className="mt-6 sm:mt-0 sm:ml-12 flex items-center no-underline shadow-none"
                   target="_blank"
                 >
-                  <div className="flex-shrink-0">
-                    <Image
-                      fixed={data.jeff.childImageSharp.fixed}
+                  <div className="flex-shrink-0 mt-6">
+                    <img
+                      src={data.jeff.publicURL}
                       className="h-12 w-12 rounded-full border-2 border-white"
                       alt={"https://twitter.com/jeffreyxdash"}
                     />

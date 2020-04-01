@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-162477093-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -85,16 +85,16 @@ module.exports = {
         postCssPlugins: [
           require(`tailwindcss`)(`./tailwind.config.js`),
           require(`autoprefixer`),
-          require(`cssnano`)
-        ]
-      }
+          require(`cssnano`),
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: [`src/styles/globals.css`]
-      }
+        purgeOnly: [`src/styles/globals.css`],
+      },
     },
   ],
 }

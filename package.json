@@ -48,7 +48,12 @@
     "stylelint": "^13.2.1",
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.2.0",
-    "twin.macro": "^1.0.0-alpha.8"
+    "twin.macro": "^1.0.0-alpha.8",
+    "@commitlint/config-conventional": "^8.1.0",
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.3",
+    "lerna": "^3.20.2",
+    "lint-staged": "^9.2.1"
   },
   "homepage": "https://github.com/autodapp/autodapp.github.io#readme",
   "keywords": [
@@ -63,11 +68,25 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -e docs",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|mdx|graphql)\"",
+    "prettier:validate": "npm run prettier -- --list-different"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|mdx|graphql)": [
+      "yarn format",
+      "git add"
+    ]
   }
 }

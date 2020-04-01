@@ -71,7 +71,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -e docs",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|md|mdx|graphql)\"",

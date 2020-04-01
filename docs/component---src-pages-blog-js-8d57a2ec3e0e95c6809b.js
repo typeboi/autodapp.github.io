@@ -1,5 +1,5 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
-  [3],
+  [4],
   {
     vx99: function(e, t, a) {
       "use strict"
@@ -35,7 +35,7 @@
                 null,
                 l.a.createElement(
                   "h3",
-                  { style: { marginBottom: Object(s.a)(0.25) } },
+                  { style: { marginBottom: Object(s.a)(1 / 4) } },
                   l.a.createElement(
                     r.Link,
                     { style: { boxShadow: "none" }, to: t.fields.slug },
@@ -61,4 +61,4 @@
     },
   },
 ])
-//# sourceMappingURL=component---src-pages-blog-js-6262500b1c2b1d23072d.js.map
+//# sourceMappingURL=component---src-pages-blog-js-8d57a2ec3e0e95c6809b.js.map

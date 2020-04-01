@@ -1,5 +1,5 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
-  [2],
+  [3],
   {
     w2l6: function(t, e, a) {
       "use strict"
@@ -31,4 +31,4 @@
     },
   },
 ])
-//# sourceMappingURL=component---src-pages-404-js-9188ab7ba8aa69c319f6.js.map
+//# sourceMappingURL=component---src-pages-404-js-c720a9d310a7ee983590.js.map

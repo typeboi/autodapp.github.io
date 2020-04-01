@@ -1,5 +1,5 @@
 ;(window.webpackJsonp = window.webpackJsonp || []).push([
-  [4],
+  [5],
   {
     RXBc: function(e, t, a) {
       "use strict"
@@ -43,7 +43,7 @@
                 null,
                 r.a.createElement(
                   "h3",
-                  { style: { marginBottom: Object(s.a)(0.25) } },
+                  { style: { marginBottom: Object(s.a)(1 / 4) } },
                   r.a.createElement(
                     o.Link,
                     { style: { boxShadow: "none" }, to: t.fields.slug },
@@ -69,4 +69,4 @@
     },
   },
 ])
-//# sourceMappingURL=component---src-pages-index-js-5b63573d521a71ae65ef.js.map
+//# sourceMappingURL=component---src-pages-index-js-ca7a4676fbd3cb43dc68.js.map

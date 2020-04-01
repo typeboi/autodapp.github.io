@@ -47,11 +47,6 @@ function Billboard() {
       }
       bg: file(absolutePath: { regex: "/bg.svg/" }) {
         publicURL
-        childImageSharp {
-          fixed(width: 1600, height: 2600) {
-            ...GatsbyImageSharpFixed
-          }
-        }
       }
       splash: file(absolutePath: { regex: "/splash.png/" }) {
         childImageSharp {

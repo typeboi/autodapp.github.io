@@ -1,0 +1,11 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "AutoDapp",
+        "description": "Autodapp",
+        "social": { "twitter": "autodapp" }
+      }
+    }
+  }
+}

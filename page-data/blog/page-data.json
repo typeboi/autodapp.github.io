@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"site":{"siteMetadata":{"title":"AutoDapp"}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Hello World Hello world","fields":{"slug":"/hello-world/"},"frontmatter":{"date":"March 29, 2020","title":"Hello World","description":"Hello World"}}}]}},"pageContext":{}}}

@@ -28,8 +28,12 @@ const Content = styled.div`
 function Billboard() {
   const data = useStaticQuery(graphql`
     query BillboardQuery {
-      logo: file(absolutePath: { regex: "/logo.svg/" }) {
-        publicURL
+      logo: file(absolutePath: { regex: "/autodapp-logo.png/" }) {
+        childImageSharp {
+          fixed(width: 180, height: 40) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
       ray: file(absolutePath: { regex: "/raymondcheng00.jpg/" }) {
         childImageSharp {
@@ -131,16 +135,15 @@ function Billboard() {
             <div className="px-6 pt-8 pb-12 md:max-w-3xl md:mx-auto lg:mx-0 lg:max-w-none lg:pt-0 lg:pb-12">
               <div className="flex justify-between">
                 <div>
-                  <img
-                    className="h-10 lg:h-12 xl:h-12"
-                    src={data.logo.publicURL}
+                  <Image
+                    fixed={data.logo.childImageSharp.fixed}
                     alt={"AutoDapp"}
                   />
                 </div>
-                <div className="pt-1 lg:pt-2 xl:pt-3">
+                <div className="pt-2 lg:pt-2 xl:pt-2">
                   <a
                     href="https://github.com/autodapp/autodapp"
-                    className="text-lg font-semibold text-white focus:outline-none focus:underline no-underline outline-none"
+                    className="text-md font-semibold text-white focus:outline-none focus:underline no-underline outline-none"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

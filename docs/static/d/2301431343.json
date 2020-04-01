@@ -1,7 +1,15 @@
 {
   "data": {
     "logo": {
-      "publicURL": "/static/autodapp-logo-46f8c38f3fe6ca24813dd3b56f884052.svg"
+      "childImageSharp": {
+        "fixed": {
+          "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAzUlEQVQY02NgAIKMyxNdgDg498pUZhD/9penLP///wez0QFQXOzfv3/CDLgA0CAHIO4D4v68K1MjoJqygJqqgLQ4ENsCcTUQWwKxL5RdCpT3BGInINsLiO2A7FAgrQcyMB+IW4G4JvVSf/3Sp/uEgBKdQAUzgHQPEE8F4jYgrgfiRUDxBiBdCMTTgXgdkD8HqmYTEBcwZF2ZzAg0rBCIG4PONAoABVm//vkhCaRBbGMg1gZiGSBWB2IVIDYCGqIBpCWhrk4BYn0gzgHpAQDSw8d4+p86HQAAAABJRU5ErkJggg==",
+          "width": 180,
+          "height": 40,
+          "src": "/static/6ab7beeed52d38969b779734186bea94/383a4/autodapp-logo.png",
+          "srcSet": "/static/6ab7beeed52d38969b779734186bea94/383a4/autodapp-logo.png 1x,\n/static/6ab7beeed52d38969b779734186bea94/3cd97/autodapp-logo.png 1.5x,\n/static/6ab7beeed52d38969b779734186bea94/64570/autodapp-logo.png 2x"
+        }
+      }
     },
     "ray": {
       "childImageSharp": {

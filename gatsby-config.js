@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/autodapp.github.io",
   siteMetadata: {
     title: `AutoDapp`,
     author: {

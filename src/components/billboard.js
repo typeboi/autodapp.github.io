@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "@emotion/styled"
-import Image from "gatsby-image"
 import SEO from "../components/seo"
 
 const Hero = styled.div`
@@ -153,7 +152,7 @@ function Billboard() {
                 Empowering developers to decentralize existing apps with a
                 single line of code.
               </p>
-              <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mt-6 xl:mt-8">
+              <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mt-6 md:mt-8 lg:mt-8 xl:mt-8">
                 Sign up for updates
               </p>
               <div className="mt-4 sm:flex xl:mt-4">{form}</div>
@@ -170,20 +169,20 @@ function Billboard() {
               <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
                 Talk to us
               </p>
-              <div className="sm:flex">
+              <div className="sm:flex mt-6">
                 <a
                   href="https://twitter.com/raymondcheng00"
-                  className="flex items-center no-underline shadow-none"
+                  className="flex no-underline shadow-none"
                   target="_blank"
                 >
-                  <div className="flex-shrink-0 mt-6">
+                  <div className="flex-shrink-0">
                     <img
                       src={data.ray.publicURL}
                       className="h-12 w-12 rounded-full border-2 border-white"
                       alt={"https://twitter.com/raymondcheng00"}
                     />
                   </div>
-                  <div className="ml-3">
+                  <div className="ml-3 mt-1">
                     <p className="font-semibold text-white leading-tight">
                       Raymond Cheng
                     </p>
@@ -196,17 +195,17 @@ function Billboard() {
                 </a>
                 <a
                   href="https://twitter.com/jeffreyxdash"
-                  className="mt-6 sm:mt-0 sm:ml-12 flex items-center no-underline shadow-none"
+                  className="sm:mt-0 sm:ml-12 flex no-underline shadow-none"
                   target="_blank"
                 >
-                  <div className="flex-shrink-0 mt-6">
+                  <div className="flex-shrink-0">
                     <img
                       src={data.jeff.publicURL}
                       className="h-12 w-12 rounded-full border-2 border-white"
                       alt={"https://twitter.com/jeffreyxdash"}
                     />
                   </div>
-                  <div className="ml-3">
+                  <div className="ml-3 mt-1">
                     <p className="font-semibold text-white leading-tight">
                       Jeffrey Dash Hsu
                     </p>
